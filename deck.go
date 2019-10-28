@@ -37,7 +37,6 @@ func newDeck() deck {
 			d = append(d, cardNo+" of "+cardType)
 		}
 	}
-
 	return d
 }
 func (d deck) deckToString() string {
