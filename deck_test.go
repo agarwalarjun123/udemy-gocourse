@@ -8,7 +8,7 @@ import (
 func TestNewDeck(t *testing.T) {
 	a := newDeck()
 	if len(a) != 52 {
-		t.Errorf("Expected deck length of 52 but got")
+		t.Errorf("Expected deck length of 52 but got less length")
 	}
 }
 func TestIO(t *testing.T) {
