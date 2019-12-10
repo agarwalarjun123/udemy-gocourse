@@ -10,6 +10,9 @@ import (
 type logWriter struct {
 }
 
+type fileWriter struct {
+}
+
 func (b logWriter) Write(p []byte) (int, error) {
 	fmt.Println(string(p))
 	return len(p), nil

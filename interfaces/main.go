@@ -9,13 +9,11 @@ type spanishBot struct {
 
 type bot interface {
 	getGreeting() string
-}
-type r struct {
-	f bot
+	printd()
 }
 
-func (e r) getGreeting() string {
-	return "a"
+func (e spanishBot) printd() {
+	fmt.Println("spannish bot running")
 }
 
 func (e englishBot) getGreeting() string {
@@ -24,14 +22,16 @@ func (e englishBot) getGreeting() string {
 func (e spanishBot) getGreeting() string {
 	return "Hola!"
 }
-
+func findPrintGreeting(b bot) {
+	b.printd()
+}
 func printGreeting(b bot) {
 	fmt.Println(b.getGreeting())
 }
 
 func main() {
 	sb := spanishBot{}
-	eb := englishBot{}
-	printGreeting(eb)
+	// eb := english/Bot{}
 	printGreeting(sb)
+	findPrintGreeting(sb)
 }
